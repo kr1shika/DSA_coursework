@@ -35,7 +35,6 @@ public class KriImageDownloader extends JFrame {
     public KriImageDownloader() {
         setTitle("Image Downloader"); 
 
-      
         kriInitComponents();
         kriExecutorService = Executors.newFixedThreadPool(5);
         getContentPane().setBackground(new Color(48, 48, 48));
@@ -44,9 +43,21 @@ public class KriImageDownloader extends JFrame {
     private void kriInitComponents() {
         setTitle("Kri Image Downloader");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new GridLayout(3, 1)); // 3 rows: 1 for URL, 1 for buttons, 1 for progress bar
+        setLayout(new GridLayout(4, 1)); // 3 rows: 1 for URL, 1 for buttons, 1 for progress bar
 
         // Row 1: URL label and input field
+
+        JPanel additionalPanel = new JPanel();
+            additionalPanel.setBackground(new Color(48, 48, 48));
+
+            JLabel helloLabel = new JLabel("DOWNLOAD IMAGE");
+            helloLabel.setForeground(new Color(255, 255, 255));
+            helloLabel.setFont(helloLabel.getFont().deriveFont(Font.BOLD));
+            additionalPanel.add(helloLabel);
+
+            add(additionalPanel);
+
+
         JPanel kriUrlPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         kriUrlPanel.setBackground(new Color(48, 48, 48));
         
