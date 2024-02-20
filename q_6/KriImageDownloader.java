@@ -1,4 +1,4 @@
-package q_7;
+package q_6;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
